@@ -4,9 +4,9 @@
  * Plugin Name: Formshive
  * Plugin URI: https://formshive.com
  * Description: Easily embed and create Formshive forms on your WordPress website.
- * Version: 0.1.1
- * Author: Formshive
- * Author URI: https://formshive.com
+ * Version: 0.1.2
+ * Author: Franz Geffke
+ * Author URI: https://gofranz.com
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: formshive
@@ -22,7 +22,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('FORMSHIVE_VERSION', '0.1.1');
+define('FORMSHIVE_VERSION', '0.1.2');
 define('FORMSHIVE_PLUGIN_FILE', __FILE__);
 define('FORMSHIVE_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('FORMSHIVE_PLUGIN_URL', plugin_dir_url(__FILE__));

@@ -125,6 +125,9 @@ Yes! The plugin includes a custom Gutenberg block for easy form embedding in the
 * Updated filesystem operations to use WordPress methods
 * Fixed all WordPress coding standard violations
 
+= 0.1.2 =
+* Plugin and author URIs are the same
+
 == Additional Info ==
 
 = Requirements =
