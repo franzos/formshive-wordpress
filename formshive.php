@@ -4,7 +4,7 @@
  * Plugin Name: Formshive
  * Plugin URI: https://formshive.com
  * Description: Easily embed and create Formshive forms on your WordPress website.
- * Version: 0.1.2
+ * Version: 0.1.3
  * Author: Franz Geffke
  * Author URI: https://gofranz.com
  * License: GPL v2 or later
