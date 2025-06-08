@@ -1,0 +1,273 @@
+# Copyright (C) 2025 Formshive
+# This file is distributed under the same license as the Formshive plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Formshive 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formshive\n"
+"POT-Creation-Date: 2025-01-08 00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2025-01-08 12:00+0000\n"
+"Last-Translator: Formshive Team\n"
+"Language-Team: Chinese (China)\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: WordPress\n"
+"X-Domain: formshive\n"
+
+#: formshive.php:45
+msgid "Formshive requires WordPress version 5.0 or higher."
+msgstr "Formshive 需要 WordPress 5.0 或更高版本。"
+
+#: includes/class-formshive-admin.php:28
+msgid "Forms"
+msgstr "表单"
+
+#: includes/class-formshive-admin.php:29
+msgid "All Forms"
+msgstr "所有表单"
+
+#: includes/class-formshive-admin.php:30
+msgid "Add New Form"
+msgstr "添加新表单"
+
+#: includes/class-formshive-admin.php:31
+msgid "Edit Form"
+msgstr "编辑表单"
+
+#: includes/class-formshive-admin.php:32
+msgid "New Form"
+msgstr "新表单"
+
+#: includes/class-formshive-admin.php:33
+msgid "View Form"
+msgstr "查看表单"
+
+#: includes/class-formshive-admin.php:34
+msgid "View Forms"
+msgstr "查看表单"
+
+#: includes/class-formshive-admin.php:35
+msgid "Search Forms"
+msgstr "搜索表单"
+
+#: includes/class-formshive-admin.php:36
+msgid "No forms found"
+msgstr "未找到表单"
+
+#: includes/class-formshive-admin.php:37
+msgid "No forms found in Trash"
+msgstr "回收站中未找到表单"
+
+#: includes/class-formshive-admin.php:48
+msgid "Settings"
+msgstr "设置"
+
+#: includes/class-formshive-admin.php:165
+msgid "Form saved successfully!"
+msgstr "表单保存成功！"
+
+#: includes/class-formshive-admin.php:168
+msgid "Error saving form. Please try again."
+msgstr "保存表单时出错。请重试。"
+
+#: includes/class-formshive-admin.php:185
+msgid "Form deleted successfully!"
+msgstr "表单删除成功！"
+
+#: includes/class-formshive-admin.php:188
+msgid "Error deleting form. Please try again."
+msgstr "删除表单时出错。请重试。"
+
+#: includes/class-formshive-blocks.php:84
+msgid "Please select a form in the block settings."
+msgstr "请在块设置中选择一个表单。"
+
+#: includes/class-formshive-shortcode.php:56
+msgid "Form not found."
+msgstr "未找到表单。"
+
+#: includes/class-formshive-shortcode.php:141
+msgid "Required field"
+msgstr "必填字段"
+
+#: includes/class-formshive-shortcode.php:185
+msgid "Submit"
+msgstr "提交"
+
+#: templates/admin/forms-list.php:7
+msgid "Formshive Forms"
+msgstr "Formshive 表单"
+
+#: templates/admin/forms-list.php:8
+msgid "Manage your forms and embed them anywhere on your website."
+msgstr "管理您的表单并将其嵌入到网站的任何位置。"
+
+#: templates/admin/forms-list.php:16
+msgid "Add New Form"
+msgstr "添加新表单"
+
+#: templates/admin/forms-list.php:25
+msgid "No forms found."
+msgstr "未找到表单。"
+
+#: templates/admin/forms-list.php:26
+msgid "Create your first form to get started."
+msgstr "创建您的第一个表单以开始使用。"
+
+#: templates/admin/form-editor.php:8
+msgid "Add New Form"
+msgstr "添加新表单"
+
+#: templates/admin/form-editor.php:24
+msgid "Form Name"
+msgstr "表单名称"
+
+#: templates/admin/form-editor.php:33
+msgid "Enter a descriptive name for this form."
+msgstr "为此表单输入一个描述性名称。"
+
+#: templates/admin/form-editor.php:39
+msgid "Formshive URL"
+msgstr "Formshive URL"
+
+#: templates/admin/form-editor.php:50
+msgid "Enter the complete Formshive form URL from your Formshive account."
+msgstr "输入来自您的 Formshive 账户的完整 Formshive 表单 URL。"
+
+#: templates/admin/form-editor.php:61
+msgid "Embed Options"
+msgstr "嵌入选项"
+
+#: templates/admin/form-editor.php:66
+msgid "CSS Framework"
+msgstr "CSS 框架"
+
+#: templates/admin/form-editor.php:71
+msgid "Formshive"
+msgstr "Formshive"
+
+#: templates/admin/form-editor.php:74
+msgid "Bootstrap"
+msgstr "Bootstrap"
+
+#: templates/admin/form-editor.php:77
+msgid "Bulma"
+msgstr "Bulma"
+
+#: templates/admin/form-editor.php:81
+msgid "Select the CSS framework for styling the embedded form."
+msgstr "选择用于样式化嵌入表单的 CSS 框架。"
+
+#: templates/admin/form-editor.php:92
+msgid "Update Form"
+msgstr "更新表单"
+
+#: templates/admin/form-editor.php:92
+msgid "Save Form"
+msgstr "保存表单"
+
+#: templates/admin/form-editor.php:94
+msgid "Cancel"
+msgstr "取消"
+
+#: templates/admin/form-editor.php:117
+msgid "Validating..."
+msgstr "验证中..."
+
+#: templates/admin/form-editor.php:134
+msgid "Validation failed. Please try again."
+msgstr "验证失败。请重试。"
+
+#: templates/admin/form-editor.php:153
+msgid "Saving..."
+msgstr "保存中..."
+
+#: templates/admin/form-editor.php:163
+msgid "Save failed. Please try again."
+msgstr "保存失败。请重试。"
+
+#: templates/admin/settings.php:15
+msgid "Formshive Settings"
+msgstr "Formshive 设置"
+
+#: templates/admin/settings.php:26
+msgid "API Endpoint"
+msgstr "API 端点"
+
+#: templates/admin/settings.php:36
+msgid "The Formshive API endpoint URL. Do not change unless instructed."
+msgstr "Formshive API 端点 URL。除非有指示，否则请勿更改。"
+
+#: templates/admin/settings.php:43
+msgid "Default CSS Framework"
+msgstr "默认 CSS 框架"
+
+#: templates/admin/settings.php:48
+msgid "Formshive"
+msgstr "Formshive"
+
+#: templates/admin/settings.php:51
+msgid "Bootstrap"
+msgstr "Bootstrap"
+
+#: templates/admin/settings.php:54
+msgid "Bulma"
+msgstr "Bulma"
+
+#: templates/admin/settings.php:58
+msgid "Default CSS framework for new embedded forms."
+msgstr "新嵌入表单的默认 CSS 框架。"
+
+#: templates/admin/settings.php:63
+msgid "Development Mode"
+msgstr "开发模式"
+
+#: templates/admin/settings.php:72
+msgid "Enable development mode features"
+msgstr "启用开发模式功能"
+
+#: templates/admin/settings.php:75
+msgid "Enables additional debugging and development features. Only visible when WP_DEBUG is enabled."
+msgstr "启用额外的调试和开发功能。仅在启用 WP_DEBUG 时可见。"
+
+#: templates/admin/settings.php:83
+msgid "Usage Instructions"
+msgstr "使用说明"
+
+#: templates/admin/settings.php:85
+msgid "Shortcode Usage"
+msgstr "短代码使用"
+
+#: templates/admin/settings.php:86
+msgid "Use the following shortcode to display your forms:"
+msgstr "使用以下短代码显示您的表单："
+
+#: templates/admin/settings.php:88
+msgid "Or by form ID:"
+msgstr "或通过表单 ID："
+
+#: templates/admin/settings.php:91
+msgid "Gutenberg Block"
+msgstr "古腾堡块"
+
+#: templates/admin/settings.php:92
+msgid "Search for \"Formshive\" in the block inserter to add forms using the visual editor."
+msgstr "在块插入器中搜索 \"Formshive\" 以使用可视编辑器添加表单。"
+
+#: templates/admin/settings.php:94
+msgid "PHP Template Usage"
+msgstr "PHP 模板使用"
+
+#: templates/admin/settings.php:95
+msgid "Use in your theme templates:"
+msgstr "在您的主题模板中使用："
+
+#: templates/admin/settings.php:104
+msgid "Save Settings"
+msgstr "保存设置"
+
+#: includes/class-formshive-api.php:47
+msgid "Invalid Formshive URL. Please enter the complete URL from your Formshive account (e.g., https://api.formshive.com/v1/digest/your-form-id)."
+msgstr "无效的 Formshive URL。请输入来自您的 Formshive 账户的完整 URL（例如：https://api.formshive.com/v1/digest/your-form-id）。"

@@ -1,0 +1,273 @@
+# Copyright (C) 2025 Formshive
+# This file is distributed under the same license as the Formshive plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Formshive 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formshive\n"
+"POT-Creation-Date: 2025-01-08 00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2025-01-08 12:00+0000\n"
+"Last-Translator: Formshive Team\n"
+"Language-Team: Portuguese (Brazil)\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: WordPress\n"
+"X-Domain: formshive\n"
+
+#: formshive.php:45
+msgid "Formshive requires WordPress version 5.0 or higher."
+msgstr "Formshive requer WordPress versão 5.0 ou superior."
+
+#: includes/class-formshive-admin.php:28
+msgid "Forms"
+msgstr "Formulários"
+
+#: includes/class-formshive-admin.php:29
+msgid "All Forms"
+msgstr "Todos os formulários"
+
+#: includes/class-formshive-admin.php:30
+msgid "Add New Form"
+msgstr "Adicionar novo formulário"
+
+#: includes/class-formshive-admin.php:31
+msgid "Edit Form"
+msgstr "Editar formulário"
+
+#: includes/class-formshive-admin.php:32
+msgid "New Form"
+msgstr "Novo formulário"
+
+#: includes/class-formshive-admin.php:33
+msgid "View Form"
+msgstr "Ver formulário"
+
+#: includes/class-formshive-admin.php:34
+msgid "View Forms"
+msgstr "Ver formulários"
+
+#: includes/class-formshive-admin.php:35
+msgid "Search Forms"
+msgstr "Buscar formulários"
+
+#: includes/class-formshive-admin.php:36
+msgid "No forms found"
+msgstr "Nenhum formulário encontrado"
+
+#: includes/class-formshive-admin.php:37
+msgid "No forms found in Trash"
+msgstr "Nenhum formulário encontrado na lixeira"
+
+#: includes/class-formshive-admin.php:48
+msgid "Settings"
+msgstr "Configurações"
+
+#: includes/class-formshive-admin.php:165
+msgid "Form saved successfully!"
+msgstr "Formulário salvo com sucesso!"
+
+#: includes/class-formshive-admin.php:168
+msgid "Error saving form. Please try again."
+msgstr "Erro ao salvar formulário. Por favor, tente novamente."
+
+#: includes/class-formshive-admin.php:185
+msgid "Form deleted successfully!"
+msgstr "Formulário excluído com sucesso!"
+
+#: includes/class-formshive-admin.php:188
+msgid "Error deleting form. Please try again."
+msgstr "Erro ao excluir formulário. Por favor, tente novamente."
+
+#: includes/class-formshive-blocks.php:84
+msgid "Please select a form in the block settings."
+msgstr "Por favor, selecione um formulário nas configurações do bloco."
+
+#: includes/class-formshive-shortcode.php:56
+msgid "Form not found."
+msgstr "Formulário não encontrado."
+
+#: includes/class-formshive-shortcode.php:141
+msgid "Required field"
+msgstr "Campo obrigatório"
+
+#: includes/class-formshive-shortcode.php:185
+msgid "Submit"
+msgstr "Enviar"
+
+#: templates/admin/forms-list.php:7
+msgid "Formshive Forms"
+msgstr "Formulários Formshive"
+
+#: templates/admin/forms-list.php:8
+msgid "Manage your forms and embed them anywhere on your website."
+msgstr "Gerencie seus formulários e incorpore-os em qualquer lugar do seu site."
+
+#: templates/admin/forms-list.php:16
+msgid "Add New Form"
+msgstr "Adicionar novo formulário"
+
+#: templates/admin/forms-list.php:25
+msgid "No forms found."
+msgstr "Nenhum formulário encontrado."
+
+#: templates/admin/forms-list.php:26
+msgid "Create your first form to get started."
+msgstr "Crie seu primeiro formulário para começar."
+
+#: templates/admin/form-editor.php:8
+msgid "Add New Form"
+msgstr "Adicionar novo formulário"
+
+#: templates/admin/form-editor.php:24
+msgid "Form Name"
+msgstr "Nome do formulário"
+
+#: templates/admin/form-editor.php:33
+msgid "Enter a descriptive name for this form."
+msgstr "Digite um nome descritivo para este formulário."
+
+#: templates/admin/form-editor.php:39
+msgid "Formshive URL"
+msgstr "URL do Formshive"
+
+#: templates/admin/form-editor.php:50
+msgid "Enter the complete Formshive form URL from your Formshive account."
+msgstr "Digite a URL completa do formulário Formshive da sua conta Formshive."
+
+#: templates/admin/form-editor.php:61
+msgid "Embed Options"
+msgstr "Opções de incorporação"
+
+#: templates/admin/form-editor.php:66
+msgid "CSS Framework"
+msgstr "Framework CSS"
+
+#: templates/admin/form-editor.php:71
+msgid "Formshive"
+msgstr "Formshive"
+
+#: templates/admin/form-editor.php:74
+msgid "Bootstrap"
+msgstr "Bootstrap"
+
+#: templates/admin/form-editor.php:77
+msgid "Bulma"
+msgstr "Bulma"
+
+#: templates/admin/form-editor.php:81
+msgid "Select the CSS framework for styling the embedded form."
+msgstr "Selecione o framework CSS para estilizar o formulário incorporado."
+
+#: templates/admin/form-editor.php:92
+msgid "Update Form"
+msgstr "Atualizar formulário"
+
+#: templates/admin/form-editor.php:92
+msgid "Save Form"
+msgstr "Salvar formulário"
+
+#: templates/admin/form-editor.php:94
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: templates/admin/form-editor.php:117
+msgid "Validating..."
+msgstr "Validando..."
+
+#: templates/admin/form-editor.php:134
+msgid "Validation failed. Please try again."
+msgstr "Validação falhou. Por favor, tente novamente."
+
+#: templates/admin/form-editor.php:153
+msgid "Saving..."
+msgstr "Salvando..."
+
+#: templates/admin/form-editor.php:163
+msgid "Save failed. Please try again."
+msgstr "Falha ao salvar. Por favor, tente novamente."
+
+#: templates/admin/settings.php:15
+msgid "Formshive Settings"
+msgstr "Configurações do Formshive"
+
+#: templates/admin/settings.php:26
+msgid "API Endpoint"
+msgstr "Endpoint da API"
+
+#: templates/admin/settings.php:36
+msgid "The Formshive API endpoint URL. Do not change unless instructed."
+msgstr "A URL do endpoint da API do Formshive. Não altere a menos que instruído."
+
+#: templates/admin/settings.php:43
+msgid "Default CSS Framework"
+msgstr "Framework CSS padrão"
+
+#: templates/admin/settings.php:48
+msgid "Formshive"
+msgstr "Formshive"
+
+#: templates/admin/settings.php:51
+msgid "Bootstrap"
+msgstr "Bootstrap"
+
+#: templates/admin/settings.php:54
+msgid "Bulma"
+msgstr "Bulma"
+
+#: templates/admin/settings.php:58
+msgid "Default CSS framework for new embedded forms."
+msgstr "Framework CSS padrão para novos formulários incorporados."
+
+#: templates/admin/settings.php:63
+msgid "Development Mode"
+msgstr "Modo de desenvolvimento"
+
+#: templates/admin/settings.php:72
+msgid "Enable development mode features"
+msgstr "Ativar recursos do modo de desenvolvimento"
+
+#: templates/admin/settings.php:75
+msgid "Enables additional debugging and development features. Only visible when WP_DEBUG is enabled."
+msgstr "Ativa recursos adicionais de depuração e desenvolvimento. Visível apenas quando WP_DEBUG está ativado."
+
+#: templates/admin/settings.php:83
+msgid "Usage Instructions"
+msgstr "Instruções de uso"
+
+#: templates/admin/settings.php:85
+msgid "Shortcode Usage"
+msgstr "Uso de shortcode"
+
+#: templates/admin/settings.php:86
+msgid "Use the following shortcode to display your forms:"
+msgstr "Use o seguinte shortcode para exibir seus formulários:"
+
+#: templates/admin/settings.php:88
+msgid "Or by form ID:"
+msgstr "Ou por ID do formulário:"
+
+#: templates/admin/settings.php:91
+msgid "Gutenberg Block"
+msgstr "Bloco Gutenberg"
+
+#: templates/admin/settings.php:92
+msgid "Search for \"Formshive\" in the block inserter to add forms using the visual editor."
+msgstr "Procure por \"Formshive\" no insersor de blocos para adicionar formulários usando o editor visual."
+
+#: templates/admin/settings.php:94
+msgid "PHP Template Usage"
+msgstr "Uso em templates PHP"
+
+#: templates/admin/settings.php:95
+msgid "Use in your theme templates:"
+msgstr "Use em seus templates de tema:"
+
+#: templates/admin/settings.php:104
+msgid "Save Settings"
+msgstr "Salvar configurações"
+
+#: includes/class-formshive-api.php:47
+msgid "Invalid Formshive URL. Please enter the complete URL from your Formshive account (e.g., https://api.formshive.com/v1/digest/your-form-id)."
+msgstr "URL do Formshive inválida. Por favor, digite a URL completa da sua conta Formshive (ex: https://api.formshive.com/v1/digest/seu-id-formulario)."
