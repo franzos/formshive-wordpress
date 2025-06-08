@@ -21,6 +21,11 @@ A comprehensive WordPress plugin that allows you to embed Formshive forms on you
 - **Widget Support**: Add forms to widget areas
 - **PHP Integration**: Embed forms directly in theme files
 
+### 🌍 Multi-Language Support
+- **6 Languages**: English, German, French, Spanish, Portuguese, Chinese, Arabic
+- **RTL Support**: Full right-to-left language support for Arabic
+- **WordPress i18n**: Complete internationalization following WordPress standards
+
 ## Installation
 
 ### Automatic Installation (Recommended)

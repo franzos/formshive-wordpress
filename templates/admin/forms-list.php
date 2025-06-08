@@ -6,17 +6,17 @@ if (!defined('ABSPATH')) {
 ?>
 
 <div class="wrap">
-    <h1 class="wp-heading-inline"><?php _e('Formshive Forms', 'formshive'); ?></h1>
+    <h1 class="wp-heading-inline"><?php esc_html_e('Formshive Forms', 'formshive'); ?></h1>
     <a href="<?php echo esc_url(admin_url('admin.php?page=formshive-add-new')); ?>" class="page-title-action">
-        <?php _e('Add New', 'formshive'); ?>
+        <?php esc_html_e('Add New', 'formshive'); ?>
     </a>
     
     <?php if (empty($forms)): ?>
         <div class="notice notice-info">
             <p>
-                <?php _e('No forms found.', 'formshive'); ?>
+                <?php esc_html_e('No forms found.', 'formshive'); ?>
                 <a href="<?php echo esc_url(admin_url('admin.php?page=formshive-add-new')); ?>">
-                    <?php _e('Create your first form', 'formshive'); ?>
+                    <?php esc_html_e('Create your first form', 'formshive'); ?>
                 </a>
             </p>
         </div>
@@ -24,13 +24,13 @@ if (!defined('ABSPATH')) {
         <table class="wp-list-table widefat fixed striped">
             <thead>
                 <tr>
-                    <th scope="col"><?php _e('Name', 'formshive'); ?></th>
-                    <th scope="col"><?php _e('Form ID', 'formshive'); ?></th>
-                    <th scope="col"><?php _e('Type', 'formshive'); ?></th>
-                    <th scope="col"><?php _e('Framework', 'formshive'); ?></th>
-                    <th scope="col"><?php _e('Shortcode', 'formshive'); ?></th>
-                    <th scope="col"><?php _e('Created', 'formshive'); ?></th>
-                    <th scope="col"><?php _e('Actions', 'formshive'); ?></th>
+                    <th scope="col"><?php esc_html_e('Name', 'formshive'); ?></th>
+                    <th scope="col"><?php esc_html_e('Form ID', 'formshive'); ?></th>
+                    <th scope="col"><?php esc_html_e('Type', 'formshive'); ?></th>
+                    <th scope="col"><?php esc_html_e('Framework', 'formshive'); ?></th>
+                    <th scope="col"><?php esc_html_e('Shortcode', 'formshive'); ?></th>
+                    <th scope="col"><?php esc_html_e('Created', 'formshive'); ?></th>
+                    <th scope="col"><?php esc_html_e('Actions', 'formshive'); ?></th>
                 </tr>
             </thead>
             <tbody>
@@ -71,12 +71,12 @@ if (!defined('ABSPATH')) {
                         <td>
                             <a href="<?php echo esc_url(admin_url('admin.php?page=formshive-add-new&edit=' . $form['id'])); ?>" 
                                class="button button-small">
-                                <?php _e('Edit', 'formshive'); ?>
+                                <?php esc_html_e('Edit', 'formshive'); ?>
                             </a>
                             <button type="button" 
                                     class="button button-small button-link-delete formshive-delete-form" 
                                     data-form-id="<?php echo esc_attr($form['id']); ?>">
-                                <?php _e('Delete', 'formshive'); ?>
+                                <?php esc_html_e('Delete', 'formshive'); ?>
                             </button>
                         </td>
                     </tr>

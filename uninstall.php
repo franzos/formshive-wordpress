@@ -27,7 +27,9 @@ function formshive_uninstall_plugin() {
     
     // Remove database tables
     $table_name = $wpdb->prefix . 'formshive_forms';
-    $wpdb->query("DROP TABLE IF EXISTS {$table_name}");
+    // Sanitize table name and use direct query (acceptable in uninstall context)
+    $table_name = esc_sql($table_name);
+    $wpdb->query("DROP TABLE IF EXISTS `{$table_name}`");
     
     // Remove plugin options
     $options = array(
@@ -42,13 +44,21 @@ function formshive_uninstall_plugin() {
         delete_option($option);
         delete_site_option($option); // For multisite
     }
-    
+
     // Remove user meta data related to the plugin
-    $wpdb->query("DELETE FROM {$wpdb->usermeta} WHERE meta_key LIKE 'formshive_%'");
-    
-    // Remove transients
-    $wpdb->query("DELETE FROM {$wpdb->options} WHERE option_name LIKE '_transient_formshive_%'");
-    $wpdb->query("DELETE FROM {$wpdb->options} WHERE option_name LIKE '_transient_timeout_formshive_%'");
+    // Use WordPress function to get all users and remove meta
+    $users = get_users(array('fields' => 'ID'));
+    foreach ($users as $user_id) {
+        $meta_keys = get_user_meta($user_id);
+        foreach ($meta_keys as $key => $value) {
+            if (strpos($key, 'formshive_') === 0) {
+                delete_user_meta($user_id, $key);
+            }
+        }
+    }
+
+    // Remove transients using WordPress functions
+    formshive_delete_all_transients();
     
     // Remove any uploaded files (if they exist)
     $upload_dir = wp_upload_dir();
@@ -68,15 +78,32 @@ function formshive_uninstall_plugin() {
         $role->remove_cap('edit_formshive_forms');
         $role->remove_cap('delete_formshive_forms');
     }
-    
-    // Log uninstall for debugging (if debug mode is enabled)
-    if (defined('WP_DEBUG') && WP_DEBUG) {
-        error_log('Formshive plugin has been uninstalled and all data removed.');
+}
+
+/**
+ * Delete all formshive transients using WordPress functions
+ */
+function formshive_delete_all_transients()
+{
+    // Get all options and filter for transients
+    $all_options = wp_load_alloptions();
+
+    foreach ($all_options as $option_name => $option_value) {
+        // Check for formshive transients
+        if (strpos($option_name, '_transient_formshive_') === 0) {
+            // Extract transient name (remove _transient_ prefix)
+            $transient_name = substr($option_name, 11); // Remove '_transient_' (11 chars)
+            delete_transient($transient_name);
+        } elseif (strpos($option_name, '_transient_timeout_formshive_') === 0) {
+            // Extract transient name (remove _transient_timeout_ prefix)  
+            $transient_name = substr($option_name, 19); // Remove '_transient_timeout_' (19 chars)
+            delete_transient($transient_name);
+        }
     }
 }
 
 /**
- * Recursively remove directory and its contents
+ * Recursively remove directory and its contents using WP_Filesystem
  *
  * @param string $dir Directory path to remove
  */
@@ -84,20 +111,39 @@ function formshive_remove_directory($dir) {
     if (!is_dir($dir)) {
         return;
     }
-    
-    $files = array_diff(scandir($dir), array('.', '..'));
-    
-    foreach ($files as $file) {
-        $file_path = $dir . DIRECTORY_SEPARATOR . $file;
-        
-        if (is_dir($file_path)) {
-            formshive_remove_directory($file_path);
-        } else {
-            unlink($file_path);
+
+    // Initialize WP_Filesystem
+    global $wp_filesystem;
+
+    if (empty($wp_filesystem)) {
+        require_once(ABSPATH . '/wp-admin/includes/file.php');
+        WP_Filesystem();
+    }
+
+    // Use WP_Filesystem to remove directory recursively
+    if ($wp_filesystem && $wp_filesystem->exists($dir)) {
+        $wp_filesystem->rmdir($dir, true); // true for recursive removal
+    } else {
+        // If WP_Filesystem not available, use wp_delete_file for files
+        $files = array_diff(scandir($dir), array('.', '..'));
+
+        foreach ($files as $file) {
+            $file_path = $dir . DIRECTORY_SEPARATOR . $file;
+
+            if (is_dir($file_path)) {
+                formshive_remove_directory($file_path);
+            } else {
+                // Always use wp_delete_file()
+                wp_delete_file($file_path);
+            }
+        }
+
+        // For directory removal, we need to use WP_Filesystem
+        // Re-attempt with WP_Filesystem for the empty directory
+        if ($wp_filesystem) {
+            $wp_filesystem->rmdir($dir);
         }
     }
-    
-    rmdir($dir);
 }
 
 /**

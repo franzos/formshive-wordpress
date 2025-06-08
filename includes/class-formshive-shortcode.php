@@ -122,7 +122,7 @@ class Formshive_Shortcode {
              data-form-id="<?php echo esc_attr($form['form_id']); ?>" 
              data-framework="<?php echo esc_attr($framework); ?>">
             <div class="formshive-loading">
-                <?php _e('Loading form...', 'formshive'); ?>
+                <?php esc_html_e('Loading form...', 'formshive'); ?>
             </div>
         </div>
         
@@ -163,7 +163,7 @@ class Formshive_Shortcode {
             
             <?php foreach ($form['form_data']['fields'] as $field): ?>
                 <div class="formshive-field-wrapper">
-                    <?php echo $this->render_field($field); ?>
+                    <?php echo wp_kses_post($this->render_field($field)); ?>
                 </div>
             <?php endforeach; ?>
             
@@ -201,7 +201,7 @@ class Formshive_Shortcode {
         <div class="formshive-field formshive-field-<?php echo esc_attr($field['type']); ?>">
             <?php if (!empty($field['label'])): ?>
                 <label for="<?php echo esc_attr($field_id); ?>" class="formshive-label">
-                    <?php echo esc_html($field['label']); ?><?php echo $required_mark; ?>
+                    <?php echo esc_html($field['label']); ?><?php echo wp_kses_post($required_mark); ?>
                 </label>
             <?php endif; ?>
             
@@ -219,7 +219,7 @@ class Formshive_Shortcode {
                            name="<?php echo esc_attr($field['name']); ?>" 
                            placeholder="<?php echo esc_attr($field['placeholder'] ?? ''); ?>"
                            class="formshive-input"
-                           <?php echo $required; ?>>
+                           <?php echo esc_attr($required); ?>>
                     <?php break;
                     
                 case 'textarea': ?>
@@ -228,14 +228,14 @@ class Formshive_Shortcode {
                               placeholder="<?php echo esc_attr($field['placeholder'] ?? ''); ?>"
                               class="formshive-textarea"
                               rows="<?php echo esc_attr($field['rows'] ?? 4); ?>"
-                              <?php echo $required; ?>></textarea>
+                              <?php echo esc_attr($required); ?>></textarea>
                     <?php break;
                     
                 case 'select': ?>
                     <select id="<?php echo esc_attr($field_id); ?>"
                             name="<?php echo esc_attr($field['name']); ?>" 
                             class="formshive-select"
-                            <?php echo $required; ?>>
+                            <?php echo esc_attr($required); ?>>
                         <?php if (!empty($field['placeholder'])): ?>
                             <option value=""><?php echo esc_html($field['placeholder']); ?></option>
                         <?php endif; ?>
@@ -258,7 +258,7 @@ class Formshive_Shortcode {
                                            name="<?php echo esc_attr($field['name']); ?>" 
                                            value="<?php echo esc_attr($option['value']); ?>"
                                            class="formshive-radio"
-                                           <?php echo $required; ?>>
+                                           <?php echo esc_attr($required); ?>>
                                     <?php echo esc_html($option['label']); ?>
                                 </label>
                             <?php endforeach; ?>
@@ -287,7 +287,7 @@ class Formshive_Shortcode {
                            id="<?php echo esc_attr($field_id); ?>"
                            name="<?php echo esc_attr($field['name']); ?>" 
                            class="formshive-file"
-                           <?php echo $required; ?>
+                           <?php echo esc_attr($required); ?>
                            <?php if (!empty($field['accept'])): ?>accept="<?php echo esc_attr($field['accept']); ?>"<?php endif; ?>>
                     <?php break;
                     

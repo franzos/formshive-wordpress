@@ -2,7 +2,7 @@
 Contributors: formshive
 Tags: forms, contact-forms, form-builder, embed, gutenberg-blocks
 Requires at least: 5.0
-Tested up to: 6.6
+Tested up to: 6.8
 Requires PHP: 7.4
 Stable tag: 0.1.0
 License: GPL v2 or later
@@ -32,6 +32,11 @@ A WordPress integration plugin that allows you to embed Formshive forms on your 
 * **Gutenberg Blocks**: Visual form embedding in the block editor
 * **Widget Support**: Add forms to widget areas
 * **PHP Integration**: Embed forms directly in theme files
+
+**🌍 Multi-Language Support**
+* **6 Languages**: English, German, French, Spanish, Portuguese, Chinese, Arabic
+* **RTL Support**: Full right-to-left language support for Arabic
+* **WordPress i18n**: Complete internationalization following WordPress standards
 
 = Usage =
 
@@ -101,7 +106,7 @@ Form appearance is controlled by the Formshive service and the selected CSS fram
 
 = Is the plugin translation ready? =
 
-Yes, the plugin is fully internationalized and ready for translation. POT file is included.
+Yes, the plugin is fully internationalized with support for 6 languages: English, German, French, Spanish, Portuguese, Chinese, and Arabic. RTL support included.
 
 = Does it work with Gutenberg? =
 
@@ -111,6 +116,14 @@ Yes! The plugin includes a custom Gutenberg block for easy form embedding in the
 
 = 0.1.0 =
 * Initial release of Formshive WordPress plugin
+
+= 0.1.1 =
+* Added 5 new language translations: French, Spanish, Portuguese, Mandarin Chinese, Arabic
+* Used Plugin Check to implement WordPress best practices
+* Enhanced security with proper output escaping
+* Improved database operations with caching and compliance
+* Updated filesystem operations to use WordPress methods
+* Fixed all WordPress coding standard violations
 
 == Additional Info ==
 

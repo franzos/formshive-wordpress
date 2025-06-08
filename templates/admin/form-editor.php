@@ -21,7 +21,7 @@ $page_title = $is_edit ? __('Edit Form', 'formshive') : __('Add New Form', 'form
             <tbody>
                 <tr>
                     <th scope="row">
-                        <label for="form-name"><?php _e('Form Name', 'formshive'); ?> <span class="required">*</span></label>
+                        <label for="form-name"><?php esc_html_e('Form Name', 'formshive'); ?> <span class="required">*</span></label>
                     </th>
                     <td>
                         <input type="text" 
@@ -30,13 +30,13 @@ $page_title = $is_edit ? __('Edit Form', 'formshive') : __('Add New Form', 'form
                                class="regular-text" 
                                value="<?php echo $is_edit ? esc_attr($form['name']) : ''; ?>" 
                                required>
-                        <p class="description"><?php _e('Enter a descriptive name for this form.', 'formshive'); ?></p>
+                        <p class="description"><?php esc_html_e('Enter a descriptive name for this form.', 'formshive'); ?></p>
                     </td>
                 </tr>
                 
                 <tr>
                     <th scope="row">
-                        <label for="formshive-url"><?php _e('Formshive URL', 'formshive'); ?> <span class="required">*</span></label>
+                        <label for="formshive-url"><?php esc_html_e('Formshive URL', 'formshive'); ?> <span class="required">*</span></label>
                     </th>
                     <td>
                         <input type="text" 
@@ -47,7 +47,7 @@ $page_title = $is_edit ? __('Edit Form', 'formshive') : __('Add New Form', 'form
                                placeholder="https://api.formshive.com/v1/digest/2ce22659-397b-412c-abe8-a64ce53dc4a0">
                         <input type="hidden" id="formshive-form-id" name="formshive_form_id" value="<?php echo $is_edit ? esc_attr($form['form_id']) : ''; ?>">
                         <p class="description">
-                            <?php _e('Enter the complete Formshive form URL from your Formshive account.', 'formshive'); ?>
+                            <?php esc_html_e('Enter the complete Formshive form URL from your Formshive account.', 'formshive'); ?>
                         </p>
                         <div id="form-validation-result"></div>
                     </td>
@@ -58,27 +58,27 @@ $page_title = $is_edit ? __('Edit Form', 'formshive') : __('Add New Form', 'form
         
         <!-- Embed Options -->
         <div id="embed-options">
-            <h2><?php _e('Embed Options', 'formshive'); ?></h2>
+            <h2><?php esc_html_e('Embed Options', 'formshive'); ?></h2>
             <table class="form-table">
                 <tbody>
                     <tr>
                         <th scope="row">
-                            <label for="framework"><?php _e('CSS Framework', 'formshive'); ?></label>
+                            <label for="framework"><?php esc_html_e('CSS Framework', 'formshive'); ?></label>
                         </th>
                         <td>
                             <select id="framework" name="framework">
                                 <option value="formshive" <?php echo ($is_edit && $form['framework'] === 'formshive') ? 'selected' : ''; ?>>
-                                    <?php _e('Formshive', 'formshive'); ?>
+                                    <?php esc_html_e('Formshive', 'formshive'); ?>
                                 </option>
                                 <option value="bootstrap" <?php echo ($is_edit && $form['framework'] === 'bootstrap') ? 'selected' : ''; ?>>
-                                    <?php _e('Bootstrap', 'formshive'); ?>
+                                    <?php esc_html_e('Bootstrap', 'formshive'); ?>
                                 </option>
                                 <option value="bulma" <?php echo ($is_edit && $form['framework'] === 'bulma') ? 'selected' : ''; ?>>
-                                    <?php _e('Bulma', 'formshive'); ?>
+                                    <?php esc_html_e('Bulma', 'formshive'); ?>
                                 </option>
                             </select>
                             <p class="description">
-                                <?php _e('Select the CSS framework for styling the embedded form.', 'formshive'); ?>
+                                <?php esc_html_e('Select the CSS framework for styling the embedded form.', 'formshive'); ?>
                             </p>
                         </td>
                     </tr>
@@ -92,9 +92,9 @@ $page_title = $is_edit ? __('Edit Form', 'formshive') : __('Add New Form', 'form
                    name="submit" 
                    id="submit" 
                    class="button button-primary" 
-                   value="<?php echo $is_edit ? __('Update Form', 'formshive') : __('Save Form', 'formshive'); ?>">
+                   value="<?php echo $is_edit ? esc_attr__('Update Form', 'formshive') : esc_attr__('Save Form', 'formshive'); ?>">
             <a href="<?php echo esc_url(admin_url('admin.php?page=formshive')); ?>" class="button">
-                <?php _e('Cancel', 'formshive'); ?>
+                <?php esc_html_e('Cancel', 'formshive'); ?>
             </a>
         </p>
     </form>
@@ -117,7 +117,7 @@ jQuery(document).ready(function($) {
     });
     
     function validateFormshiveUrl(url) {
-        $('#form-validation-result').html('<span class="spinner is-active"></span> <?php _e('Validating...', 'formshive'); ?>');
+        $('#form-validation-result').html('<span class="spinner is-active"></span> <?php esc_html_e('Validating...', 'formshive'); ?>');
         
         $.post(formshive_ajax.ajax_url, {
             action: 'formshive_validate_form_url',
@@ -134,7 +134,7 @@ jQuery(document).ready(function($) {
                 $('#formshive-form-id').val('');
             }
         }).fail(function() {
-            $('#form-validation-result').html('<span class="notice notice-error inline"><p><?php _e('Validation failed. Please try again.', 'formshive'); ?></p></span>');
+            $('#form-validation-result').html('<span class="notice notice-error inline"><p><?php echo esc_js(__('Validation failed. Please try again.', 'formshive')); ?></p></span>');
         });
     }
     
@@ -153,7 +153,7 @@ jQuery(document).ready(function($) {
         // Show saving state
         var $submitBtn = $('#submit');
         var originalText = $submitBtn.val();
-        $submitBtn.val('<?php _e('Saving...', 'formshive'); ?>').prop('disabled', true);
+        $submitBtn.val('<?php echo esc_js(__('Saving...', 'formshive')); ?>').prop('disabled', true);
         
         $.post(formshive_ajax.ajax_url, formData, function(response) {
             if (response.success) {
@@ -163,7 +163,7 @@ jQuery(document).ready(function($) {
                 $submitBtn.val(originalText).prop('disabled', false);
             }
         }).fail(function() {
-            alert('<?php _e('Save failed. Please try again.', 'formshive'); ?>');
+            alert('<?php echo esc_js(__('Save failed. Please try again.', 'formshive')); ?>');
             $submitBtn.val(originalText).prop('disabled', false);
         });
     }

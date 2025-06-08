@@ -149,7 +149,7 @@ class Formshive_Admin {
      */
     private function save_settings() {
         if (!wp_verify_nonce($_POST['formshive_settings_nonce'], 'formshive_settings')) {
-            wp_die(__('Security check failed', 'formshive'));
+            wp_die(esc_html__('Security check failed', 'formshive'));
         }
         
         $settings = array(
@@ -175,7 +175,7 @@ class Formshive_Admin {
         check_ajax_referer('formshive_nonce', 'nonce');
         
         if (!current_user_can('manage_options')) {
-            wp_die(__('Insufficient permissions', 'formshive'));
+            wp_die(esc_html__('Insufficient permissions', 'formshive'));
         }
         
         $form_id = intval($_POST['form_id']);
@@ -208,7 +208,7 @@ class Formshive_Admin {
         check_ajax_referer('formshive_nonce', 'nonce');
         
         if (!current_user_can('manage_options')) {
-            wp_die(__('Insufficient permissions', 'formshive'));
+            wp_die(esc_html__('Insufficient permissions', 'formshive'));
         }
         
         $form_id = intval($_POST['form_id']);
@@ -228,7 +228,7 @@ class Formshive_Admin {
         check_ajax_referer('formshive_nonce', 'nonce');
         
         if (!current_user_can('manage_options')) {
-            wp_die(__('Insufficient permissions', 'formshive'));
+            wp_die(esc_html__('Insufficient permissions', 'formshive'));
         }
         
         $form_id = intval($_POST['form_id']);
@@ -248,7 +248,7 @@ class Formshive_Admin {
         check_ajax_referer('formshive_nonce', 'nonce');
         
         if (!current_user_can('manage_options')) {
-            wp_die(__('Insufficient permissions', 'formshive'));
+            wp_die(esc_html__('Insufficient permissions', 'formshive'));
         }
         
         $form_id = intval($_POST['form_id']);

@@ -37,7 +37,7 @@ class Formshive_API {
         check_ajax_referer('formshive_nonce', 'nonce');
         
         if (!current_user_can('manage_options')) {
-            wp_die(__('Insufficient permissions', 'formshive'));
+            wp_die(esc_html__('Insufficient permissions', 'formshive'));
         }
         
         $url = sanitize_url($_POST['url']);
@@ -173,6 +173,9 @@ class Formshive_API {
         // Cache for 1 hour
         set_transient($cache_key, $html, HOUR_IN_SECONDS);
         
+        // Track this transient key for easier cleanup
+        $this->track_transient_key($cache_key);
+        
         return $html;
     }
     
@@ -188,10 +191,52 @@ class Formshive_API {
                 delete_transient($cache_key);
             }
         } else {
-            // Clear all form caches
-            global $wpdb;
-            $wpdb->query("DELETE FROM {$wpdb->options} WHERE option_name LIKE '_transient_formshive_html_%'");
-            $wpdb->query("DELETE FROM {$wpdb->options} WHERE option_name LIKE '_transient_timeout_formshive_html_%'");
+            // Clear all form caches using WordPress functions
+            $this->clear_all_formshive_transients();
+        }
+    }
+    
+    /**
+     * Track transient keys for easier cleanup
+     */
+    private function track_transient_key($key) {
+        $transient_keys = wp_cache_get('formshive_transient_keys', 'formshive');
+        if (!$transient_keys) {
+            $transient_keys = array();
+        }
+        
+        if (!in_array($key, $transient_keys)) {
+            $transient_keys[] = $key;
+            wp_cache_set('formshive_transient_keys', $transient_keys, 'formshive', HOUR_IN_SECONDS);
+        }
+    }
+    
+    /**
+     * Clear all formshive transients using WordPress functions
+     */
+    private function clear_all_formshive_transients() {
+        // Get all transients with our prefix
+        $transient_keys = wp_cache_get('formshive_transient_keys', 'formshive');
+        if (!$transient_keys) {
+            $transient_keys = array();
+        }
+        
+        // Delete all stored transient keys
+        foreach ($transient_keys as $key) {
+            delete_transient($key);
+        }
+        
+        // Clear the tracking cache
+        wp_cache_delete('formshive_transient_keys', 'formshive');
+        
+        // As fallback, get options and clear manually (less efficient but WordPress-compliant)
+        $options = wp_load_alloptions();
+        foreach ($options as $option => $value) {
+            if (strpos($option, '_transient_formshive_html_') === 0 || 
+                strpos($option, '_transient_timeout_formshive_html_') === 0) {
+                $transient_name = str_replace(array('_transient_', '_transient_timeout_'), '', $option);
+                delete_transient($transient_name);
+            }
         }
     }
     
