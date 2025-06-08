@@ -1,0 +1,322 @@
+/**
+ * Formshive Frontend Styles
+ */
+
+/* Form Container */
+.formshive-form {
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: inherit;
+}
+
+.formshive-form * {
+    box-sizing: border-box;
+}
+
+/* Form Fields */
+.formshive-field {
+    margin-bottom: 20px;
+}
+
+.formshive-field-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1e1e1e;
+    font-size: 14px;
+}
+
+.formshive-field-label.required::after {
+    content: " *";
+    color: #d63638;
+}
+
+.formshive-field-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formshive-field-input:focus {
+    outline: none;
+    border-color: #007cba;
+    box-shadow: 0 0 0 2px rgba(0, 124, 186, 0.1);
+}
+
+.formshive-field-input:invalid {
+    border-color: #d63638;
+}
+
+.formshive-field-input:invalid:focus {
+    box-shadow: 0 0 0 2px rgba(214, 54, 56, 0.1);
+}
+
+/* Textarea */
+.formshive-field-input[type="textarea"],
+.formshive-field-input textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Select Dropdown */
+.formshive-field-input select {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23666' d='m2 0-2 2h4zm0 5 2-2h-4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+    padding-right: 40px;
+    appearance: none;
+}
+
+/* Radio and Checkbox Groups */
+.formshive-field-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formshive-field-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.formshive-field-option input[type="radio"],
+.formshive-field-option input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+}
+
+.formshive-field-option label {
+    margin: 0;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+/* File Upload */
+.formshive-field-input[type="file"] {
+    padding: 8px;
+    background: #f9f9f9;
+    border: 2px dashed #ddd;
+    cursor: pointer;
+}
+
+.formshive-field-input[type="file"]:hover {
+    border-color: #007cba;
+    background: #f0f6fc;
+}
+
+/* Field Help Text */
+.formshive-field-help {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Field Errors */
+.formshive-field-error {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #d63638;
+    font-weight: 500;
+}
+
+.formshive-field.has-error .formshive-field-input {
+    border-color: #d63638;
+}
+
+.formshive-field.has-error .formshive-field-label {
+    color: #d63638;
+}
+
+/* Submit Button */
+.formshive-submit {
+    background: #007cba;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+.formshive-submit:hover {
+    background: #005a87;
+    transform: translateY(-1px);
+}
+
+.formshive-submit:active {
+    transform: translateY(0);
+}
+
+.formshive-submit:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.formshive-submit.loading {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+/* Form Messages */
+.formshive-message {
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.formshive-message.success {
+    background: #d1e7dd;
+    color: #0f5132;
+    border: 1px solid #badbcc;
+}
+
+.formshive-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.formshive-message.warning {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+/* Loading Spinner */
+.formshive-loading {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #007cba;
+    border-radius: 50%;
+    animation: formshive-spin 1s linear infinite;
+    margin-right: 8px;
+}
+
+@keyframes formshive-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Framework-specific overrides */
+
+/* Bootstrap Framework */
+.formshive-framework-bootstrap .formshive-field-input {
+    border-radius: 0.375rem;
+    padding: 0.5rem 0.75rem;
+}
+
+.formshive-framework-bootstrap .formshive-submit {
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Tailwind Framework */
+.formshive-framework-tailwind .formshive-field-input {
+    border-radius: 0.375rem;
+    padding: 0.5rem 0.75rem;
+    border-color: #d1d5db;
+}
+
+.formshive-framework-tailwind .formshive-field-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.formshive-framework-tailwind .formshive-submit {
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+    background: #3b82f6;
+}
+
+.formshive-framework-tailwind .formshive-submit:hover {
+    background: #2563eb;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .formshive-field-options {
+        gap: 12px;
+    }
+    
+    .formshive-field-input {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .formshive-submit {
+        width: 100%;
+        padding: 14px 24px;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .formshive-field-label {
+        color: #f0f0f0;
+    }
+    
+    .formshive-field-input {
+        background: #2a2a2a;
+        border-color: #444;
+        color: #f0f0f0;
+    }
+    
+    .formshive-field-input:focus {
+        border-color: #4a9eff;
+    }
+    
+    .formshive-field-help {
+        color: #ccc;
+    }
+    
+    .formshive-field-input[type="file"] {
+        background: #1a1a1a;
+        border-color: #444;
+    }
+    
+    .formshive-field-input[type="file"]:hover {
+        background: #2a2a2a;
+        border-color: #4a9eff;
+    }
+}
+
+/* Accessibility */
+.formshive-field-input:focus-visible {
+    outline: 2px solid #007cba;
+    outline-offset: 2px;
+}
+
+.formshive-submit:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .formshive-field-input {
+        border-width: 2px;
+    }
+    
+    .formshive-submit {
+        border: 2px solid #000;
+    }
+}

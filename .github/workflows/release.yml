@@ -1,0 +1,63 @@
+name: Build and Release Plugin
+
+on:
+  push:
+    tags:
+      - 'v*'
+      - '[0-9]+.[0-9]+.[0-9]+'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Get version from tag
+      id: get_version
+      run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+    
+    - name: Create plugin directory
+      run: |
+        mkdir -p build/formshive
+        
+    - name: Copy plugin files
+      run: |
+        cp -r assets build/formshive/
+        cp -r includes build/formshive/
+        cp -r languages build/formshive/
+        cp -r templates build/formshive/
+        cp formshive.php build/formshive/
+        cp uninstall.php build/formshive/
+        cp readme.txt build/formshive/
+        cp README.md build/formshive/
+        
+    - name: Create ZIP file
+      run: |
+        cd build
+        zip -r formshive-${{ steps.get_version.outputs.VERSION }}.zip formshive/
+        cd ..
+        
+    - name: Create Release
+      uses: softprops/action-gh-release@v1
+      with:
+        name: Release ${{ steps.get_version.outputs.VERSION }}
+        body: |
+          ## Formshive WordPress Plugin ${{ steps.get_version.outputs.VERSION }}
+          
+          Download the plugin ZIP file below and upload it to your WordPress site.
+          
+          ### Installation
+          1. Download the ZIP file from the assets below
+          2. Go to WordPress Admin → Plugins → Add New
+          3. Click "Upload Plugin" and select the downloaded ZIP
+          4. Activate the plugin
+        files: ./build/formshive-${{ steps.get_version.outputs.VERSION }}.zip
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

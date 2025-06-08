@@ -1,0 +1,822 @@
+/**
+ * Formshive Admin Styles
+ */
+
+/* General Admin Styles */
+.formshive-admin-wrap {
+    max-width: 1200px;
+}
+
+.formshive-page-header {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.formshive-page-header h1 {
+    margin: 0 0 10px 0;
+    color: #1d2327;
+}
+
+.formshive-page-header p {
+    margin: 0;
+    color: #646970;
+}
+
+/* Forms List */
+.formshive-forms-table {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+}
+
+.formshive-forms-table .wp-list-table {
+    border: none;
+    box-shadow: none;
+}
+
+.formshive-form-type-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.formshive-form-type-badge.embed {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.formshive-form-type-badge.manual {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+.formshive-status-active {
+    color: #00a32a;
+    font-weight: 600;
+}
+
+.formshive-status-inactive {
+    color: #d63638;
+}
+
+/* Form Builder */
+.formshive-form-builder {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.formshive-form-fields {
+    flex: 2;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.formshive-field-palette {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.formshive-field-list {
+    min-height: 200px;
+    padding: 10px;
+    border: 2px dashed #c3c4c7;
+    border-radius: 4px;
+    background: #fafafa;
+}
+
+.formshive-field-list.drag-over {
+    border-color: #2271b1;
+    background: #f0f6fc;
+}
+
+.formshive-field-list-empty {
+    text-align: center;
+    color: #646970;
+    font-style: italic;
+    padding: 40px 20px;
+}
+
+/* Field Items */
+.formshive-field-item {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 15px;
+    cursor: move;
+    position: relative;
+    transition: box-shadow 0.2s ease;
+}
+
+.formshive-field-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formshive-field-item.dragging {
+    opacity: 0.5;
+    transform: rotate(5deg);
+}
+
+.formshive-field-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.formshive-field-title {
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.formshive-field-type {
+    background: #f0f0f1;
+    color: #50575e;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.formshive-field-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.formshive-field-actions button {
+    background: none;
+    border: none;
+    color: #646970;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+.formshive-field-actions button:hover {
+    color: #2271b1;
+    background: #f0f6fc;
+}
+
+.formshive-field-actions .delete-field:hover {
+    color: #d63638;
+    background: #fcf0f1;
+}
+
+.formshive-field-config {
+    display: none;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.formshive-field-config.open {
+    display: block;
+}
+
+.formshive-field-config .form-table {
+    margin: 0;
+}
+
+.formshive-field-config .form-table th {
+    width: 120px;
+    padding: 8px 0;
+    font-weight: 600;
+}
+
+.formshive-field-config .form-table td {
+    padding: 8px 0;
+}
+
+/* Field Palette */
+.formshive-palette-section {
+    margin-bottom: 20px;
+}
+
+.formshive-palette-section h4 {
+    margin: 0 0 10px 0;
+    color: #1d2327;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.formshive-palette-field {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 8px;
+    cursor: grab;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.formshive-palette-field:hover {
+    border-color: #2271b1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.formshive-palette-field:active {
+    cursor: grabbing;
+}
+
+.formshive-palette-field-icon {
+    color: #646970;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+.formshive-palette-field-label {
+    font-weight: 500;
+    color: #1d2327;
+}
+
+/* Form Actions */
+.formshive-form-actions {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: right;
+}
+
+.formshive-form-actions .button {
+    margin-left: 10px;
+}
+
+/* Settings Page */
+.formshive-settings-section {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.formshive-settings-section h3 {
+    margin-top: 0;
+    color: #1d2327;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* Loading Spinner */
+.formshive-loading {
+    display: inline-block;
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+
+.formshive-loading::after {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #f3f3f3;
+    border-top-color: #2271b1;
+    animation: formshive-spin 1s linear infinite;
+}
+
+@keyframes formshive-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Notices */
+.formshive-notice {
+    margin: 15px 0;
+    padding: 12px;
+    border-left: 4px solid #72aee6;
+    background: #f0f6fc;
+    border-radius: 0 4px 4px 0;
+}
+
+.formshive-notice.error {
+    border-left-color: #d63638;
+    background: #fcf0f1;
+}
+
+.formshive-notice.success {
+    border-left-color: #00a32a;
+    background: #f0f6fc;
+}
+
+.formshive-notice.warning {
+    border-left-color: #dba617;
+    background: #fcf9e8;
+}
+
+/* Enhanced Form Builder Styles */
+#formshive-form-builder {
+    margin-top: 20px;
+}
+
+.formshive-builder-toolbar {
+    background: #f0f0f1;
+    padding: 15px 20px;
+    border: 1px solid #c3c4c7;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+#form-fields-container {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 0 0 4px 4px;
+    min-height: 300px;
+}
+
+.formshive-fields-list {
+    padding: 20px;
+    min-height: 260px;
+}
+
+.no-fields-message {
+    text-align: center;
+    color: #646970;
+    padding: 60px 20px;
+}
+
+.no-fields-message .dashicons {
+    display: block;
+    margin: 0 auto 16px;
+    opacity: 0.3;
+}
+
+/* Field Builder Items */
+.formshive-field-builder {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.formshive-field-builder:hover {
+    border-color: #2271b1;
+    box-shadow: 0 2px 8px rgba(34, 113, 177, 0.1);
+}
+
+.formshive-field-builder.ui-sortable-helper {
+    transform: rotate(3deg);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.field-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #eee;
+    border-radius: 6px 6px 0 0;
+    cursor: move;
+}
+
+.field-handle {
+    color: #999;
+    margin-right: 12px;
+    cursor: grab;
+}
+
+.field-handle:active {
+    cursor: grabbing;
+}
+
+.field-type-icon {
+    color: #2271b1;
+    margin-right: 12px;
+    font-size: 18px;
+}
+
+.field-info {
+    flex: 1;
+}
+
+.field-label {
+    font-weight: 600;
+    color: #1d2327;
+    display: block;
+    line-height: 1.3;
+}
+
+.field-type {
+    font-size: 12px;
+    color: #646970;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.field-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.field-actions .button-link {
+    color: #646970;
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.field-actions .button-link:hover {
+    color: #2271b1;
+    background: rgba(34, 113, 177, 0.1);
+}
+
+.field-actions .delete-field:hover {
+    color: #d63638;
+    background: rgba(214, 54, 56, 0.1);
+}
+
+/* Field Settings */
+.field-settings {
+    border-top: 1px solid #eee;
+    background: #fafafa;
+}
+
+.field-settings-form {
+    padding: 20px;
+}
+
+.field-settings .form-table {
+    margin: 0;
+}
+
+.field-settings .form-table th {
+    width: 150px;
+    padding: 10px 0;
+    font-weight: 600;
+    vertical-align: top;
+}
+
+.field-settings .form-table td {
+    padding: 10px 0;
+}
+
+/* Options Management */
+.field-options-container {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    background: #fff;
+}
+
+.option-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.option-value,
+.option-label {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.remove-option {
+    color: #d63638;
+    border: none;
+    background: none;
+    padding: 6px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.remove-option:hover {
+    background: rgba(214, 54, 56, 0.1);
+}
+
+.add-option {
+    margin-top: 8px;
+}
+
+/* Modal Styles */
+.formshive-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formshive-modal-content {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    max-height: 80vh;
+    width: 90%;
+    overflow: hidden;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.formshive-modal-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9f9f9;
+}
+
+.formshive-modal-header h2 {
+    margin: 0;
+    color: #1d2327;
+    font-size: 20px;
+}
+
+.formshive-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #646970;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 3px;
+}
+
+.formshive-modal-close:hover {
+    color: #d63638;
+    background: rgba(214, 54, 56, 0.1);
+}
+
+.formshive-modal-body {
+    padding: 24px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+/* Field Types Grid */
+.field-types-grid {
+    display: grid;
+    gap: 20px;
+}
+
+.field-category h3 {
+    margin: 0 0 12px 0;
+    color: #1d2327;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 2px solid #2271b1;
+    padding-bottom: 8px;
+}
+
+.field-category-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+}
+
+.field-type-option {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.field-type-option:hover {
+    border-color: #2271b1;
+    background: #f0f6fc;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(34, 113, 177, 0.15);
+}
+
+.field-type-option .dashicons {
+    color: #2271b1;
+    font-size: 20px;
+    margin-top: 2px;
+}
+
+.field-type-info strong {
+    display: block;
+    color: #1d2327;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.field-type-info small {
+    color: #646970;
+    line-height: 1.4;
+}
+
+/* Form Preview */
+.formshive-preview-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.preview-field {
+    margin-bottom: 20px;
+}
+
+.preview-field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #1d2327;
+}
+
+.preview-field input,
+.preview-field textarea,
+.preview-field select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.preview-field small {
+    display: block;
+    color: #646970;
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+.preview-field button {
+    background: #2271b1;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+/* Sortable Placeholder */
+.field-placeholder {
+    background: #f0f6fc;
+    border: 2px dashed #2271b1;
+    border-radius: 6px;
+    height: 60px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2271b1;
+    font-weight: 600;
+}
+
+.field-placeholder::before {
+    content: "Drop field here";
+}
+
+/* Builder Settings */
+.formshive-builder-settings {
+    margin-top: 30px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.formshive-builder-settings h3 {
+    margin-top: 0;
+    color: #1d2327;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Form Validation Result */
+#form-validation-result {
+    margin-top: 8px;
+}
+
+#form-validation-result .notice {
+    margin: 8px 0 0 0;
+    padding: 8px 12px;
+}
+
+#form-validation-result .notice.inline {
+    display: block;
+    margin: 8px 0 0 0;
+}
+
+#form-validation-result .spinner {
+    float: none;
+    margin: 0 8px 0 0;
+    vertical-align: middle;
+}
+
+/* Form Editor Enhancements */
+.formshive-form-editor {
+    max-width: none;
+}
+
+.formshive-form-editor .form-table th {
+    width: 200px;
+    padding: 15px 0;
+}
+
+.formshive-form-editor .form-table td {
+    padding: 15px 0;
+}
+
+.formshive-conditional {
+    transition: all 0.3s ease;
+}
+
+.formshive-loading-message {
+    text-align: center;
+    padding: 40px;
+    color: #646970;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 782px) {
+    .formshive-form-builder {
+        flex-direction: column;
+    }
+    
+    .formshive-field-palette {
+        order: -1;
+    }
+    
+    .formshive-field-config .form-table th {
+        width: auto;
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .formshive-field-config .form-table td {
+        display: block;
+        margin-bottom: 15px;
+    }
+    
+    .field-header {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .field-actions {
+        order: -1;
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    .formshive-modal-content {
+        width: 95%;
+        max-height: 90vh;
+    }
+    
+    .field-category-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .option-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

@@ -1,0 +1,142 @@
+/**
+ * Formshive Block Editor Styles
+ */
+
+/* Block Icon */
+.wp-block-formshive-form .dashicon-forms {
+    color: #2271b1;
+}
+
+/* Block Preview */
+.formshive-block-preview {
+    background: #fff;
+    border: 1px solid #e2e4e7;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.formshive-block-preview::before {
+    content: "Formshive";
+    position: absolute;
+    top: -8px;
+    left: 12px;
+    background: #fff;
+    color: #2271b1;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0 6px;
+}
+
+.formshive-block-header {
+    border-bottom: 1px solid #e2e4e7;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.formshive-block-header h4 {
+    margin: 0 0 5px 0;
+    color: #1e1e1e;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.formshive-block-header p {
+    margin: 0;
+    color: #757575;
+    font-size: 13px;
+}
+
+.formshive-block-placeholder {
+    text-align: center;
+    color: #757575;
+    font-style: italic;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    border: 2px dashed #e2e4e7;
+}
+
+.formshive-block-placeholder p {
+    margin: 0;
+}
+
+/* Block Placeholder when no form selected */
+.wp-block-formshive-form .components-placeholder {
+    background: #fff;
+    border: 1px solid #e2e4e7;
+    border-radius: 4px;
+    padding: 20px;
+    min-height: 120px;
+}
+
+.wp-block-formshive-form .components-placeholder .components-placeholder__label {
+    color: #2271b1;
+    font-weight: 600;
+}
+
+.wp-block-formshive-form .components-placeholder .components-placeholder__instructions {
+    color: #757575;
+    margin-bottom: 15px;
+}
+
+/* Inspector Controls */
+.formshive-inspector-help {
+    color: #757575;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* Block selected state */
+.wp-block-formshive-form.is-selected .formshive-block-preview {
+    border-color: #007cba;
+    box-shadow: 0 0 0 1px #007cba;
+}
+
+/* Error state */
+.wp-block-formshive-form .components-notice.is-error {
+    margin: 10px 0;
+    background: #fcf0f1;
+    border-left: 4px solid #d63638;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Form type indicators */
+.formshive-form-type-indicator {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 8px;
+}
+
+.formshive-form-type-indicator.embed {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.formshive-form-type-indicator.manual {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .formshive-block-preview {
+        padding: 15px;
+    }
+    
+    .formshive-block-header h4 {
+        font-size: 14px;
+    }
+    
+    .formshive-block-placeholder {
+        padding: 15px;
+    }
+}

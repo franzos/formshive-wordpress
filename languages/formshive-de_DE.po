@@ -1,0 +1,226 @@
+# German (Germany) translation for Formshive
+# Copyright (C) 2025 Formshive
+# This file is distributed under the same license as the Formshive plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Formshive 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/formshive\n"
+"POT-Creation-Date: 2025-01-08 00:00:00+00:00\n"
+"PO-Revision-Date: 2025-01-08 00:00:00+00:00\n"
+"Last-Translator: \n"
+"Language-Team: German\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: manual\n"
+"X-Domain: formshive\n"
+
+#: formshive.php:45
+msgid "Formshive requires WordPress version 5.0 or higher."
+msgstr "Formshive benötigt WordPress Version 5.0 oder höher."
+
+#: includes/class-formshive-admin.php:28
+msgid "Forms"
+msgstr "Formulare"
+
+#: includes/class-formshive-admin.php:29
+msgid "All Forms"
+msgstr "Alle Formulare"
+
+#: includes/class-formshive-admin.php:30
+msgid "Add New Form"
+msgstr "Neues Formular hinzufügen"
+
+#: includes/class-formshive-admin.php:31
+msgid "Edit Form"
+msgstr "Formular bearbeiten"
+
+#: includes/class-formshive-admin.php:32
+msgid "New Form"
+msgstr "Neues Formular"
+
+#: includes/class-formshive-admin.php:33
+msgid "View Form"
+msgstr "Formular anzeigen"
+
+#: includes/class-formshive-admin.php:34
+msgid "View Forms"
+msgstr "Formulare anzeigen"
+
+#: includes/class-formshive-admin.php:35
+msgid "Search Forms"
+msgstr "Formulare durchsuchen"
+
+#: includes/class-formshive-admin.php:36
+msgid "No forms found"
+msgstr "Keine Formulare gefunden"
+
+#: includes/class-formshive-admin.php:37
+msgid "No forms found in Trash"
+msgstr "Keine Formulare im Papierkorb gefunden"
+
+#: includes/class-formshive-admin.php:48
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: includes/class-formshive-admin.php:165
+msgid "Form saved successfully!"
+msgstr "Formular erfolgreich gespeichert!"
+
+#: includes/class-formshive-admin.php:168
+msgid "Error saving form. Please try again."
+msgstr "Fehler beim Speichern des Formulars. Bitte versuchen Sie es erneut."
+
+#: includes/class-formshive-admin.php:185
+msgid "Form deleted successfully!"
+msgstr "Formular erfolgreich gelöscht!"
+
+#: includes/class-formshive-admin.php:188
+msgid "Error deleting form. Please try again."
+msgstr "Fehler beim Löschen des Formulars. Bitte versuchen Sie es erneut."
+
+#: includes/class-formshive-blocks.php:84
+msgid "Please select a form in the block settings."
+msgstr "Bitte wählen Sie ein Formular in den Block-Einstellungen aus."
+
+#: includes/class-formshive-shortcode.php:56
+msgid "Form not found."
+msgstr "Formular nicht gefunden."
+
+#: includes/class-formshive-shortcode.php:141
+msgid "Required field"
+msgstr "Pflichtfeld"
+
+#: includes/class-formshive-shortcode.php:185
+msgid "Submit"
+msgstr "Absenden"
+
+#: templates/admin/forms-list.php:7
+msgid "Formshive Forms"
+msgstr "Formshive Formulare"
+
+#: templates/admin/forms-list.php:8
+msgid "Manage your forms and embed them anywhere on your website."
+msgstr "Verwalten Sie Ihre Formulare und betten Sie sie überall auf Ihrer Website ein."
+
+#: templates/admin/forms-list.php:16
+msgid "Add New Form"
+msgstr "Neues Formular hinzufügen"
+
+#: templates/admin/forms-list.php:25
+msgid "No forms found."
+msgstr "Keine Formulare gefunden."
+
+#: templates/admin/forms-list.php:26
+msgid "Create your first form to get started."
+msgstr "Erstellen Sie Ihr erstes Formular, um zu beginnen."
+
+#: templates/admin/form-editor.php:7
+msgid "Edit Form"
+msgstr "Formular bearbeiten"
+
+#: templates/admin/form-editor.php:8
+msgid "Create Form"
+msgstr "Formular erstellen"
+
+#: templates/admin/form-editor.php:14
+msgid "Form Name"
+msgstr "Formularname"
+
+#: templates/admin/form-editor.php:20
+msgid "Form Type"
+msgstr "Formulartyp"
+
+#: templates/admin/form-editor.php:23
+msgid "Embed (JavaScript)"
+msgstr "Einbetten (JavaScript)"
+
+#: templates/admin/form-editor.php:24
+msgid "Create (Manual)"
+msgstr "Erstellen (Manuell)"
+
+#: templates/admin/form-editor.php:39
+msgid "Formshive URL"
+msgstr "Formshive URL"
+
+#: templates/admin/form-editor.php:50
+msgid "Enter the complete Formshive form URL from your Formshive account."
+msgstr "Geben Sie die vollständige Formshive Formular-URL aus Ihrem Formshive-Konto ein."
+
+#: templates/admin/form-editor.php:37
+msgid "Framework"
+msgstr "Framework"
+
+#: templates/admin/form-editor.php:71
+msgid "Formshive"
+msgstr "Formshive"
+
+#: templates/admin/form-editor.php:74
+msgid "Bootstrap"
+msgstr "Bootstrap"
+
+#: templates/admin/form-editor.php:77
+msgid "Bulma"
+msgstr "Bulma"
+
+#: templates/admin/form-editor.php:49
+msgid "Form Builder"
+msgstr "Formular-Builder"
+
+#: templates/admin/form-editor.php:68
+msgid "Save Form"
+msgstr "Formular speichern"
+
+#: templates/admin/form-editor.php:69
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#: templates/admin/settings.php:7
+msgid "Formshive Settings"
+msgstr "Formshive Einstellungen"
+
+#: templates/admin/settings.php:8
+msgid "Configure your Formshive plugin settings."
+msgstr "Konfigurieren Sie Ihre Formshive Plugin-Einstellungen."
+
+#: templates/admin/settings.php:16
+msgid "API Settings"
+msgstr "API-Einstellungen"
+
+#: templates/admin/settings.php:21
+msgid "API Endpoint"
+msgstr "API-Endpunkt"
+
+#: templates/admin/settings.php:22
+msgid "Formshive API endpoint URL"
+msgstr "Formshive API-Endpunkt URL"
+
+#: templates/admin/settings.php:43
+msgid "Default CSS Framework"
+msgstr "Standard CSS-Framework"
+
+#: templates/admin/settings.php:48
+msgid "Formshive"
+msgstr "Formshive"
+
+#: templates/admin/settings.php:51
+msgid "Bootstrap"
+msgstr "Bootstrap"
+
+#: templates/admin/settings.php:54
+msgid "Bulma"
+msgstr "Bulma"
+
+#: templates/admin/settings.php:58
+msgid "Default CSS framework for new embedded forms."
+msgstr "Standard CSS-Framework für neue eingebettete Formulare."
+
+#: templates/admin/settings.php:104
+msgid "Save Settings"
+msgstr "Einstellungen speichern"
+
+#: includes/class-formshive-api.php:47
+msgid "Invalid Formshive URL. Please enter the complete URL from your Formshive account (e.g., https://api.formshive.com/v1/digest/your-form-id)."
+msgstr "Ungültige Formshive URL. Bitte geben Sie die vollständige URL aus Ihrem Formshive-Konto ein (z.B. https://api.formshive.com/v1/digest/ihre-formular-id)."

@@ -1,0 +1,61 @@
+# WordPress
+wp-config-local.php
+wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/
+wp-content/backup-db/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/cache/
+wp-content/debug.log
+
+# Plugin specific
+*.log
+*.sql
+*.sqlite
+
+# Dependencies
+node_modules/
+vendor/
+composer.lock
+package-lock.json
+
+# Build outputs
+dist/
+build/
+*.min.css
+*.min.js
+*.map
+
+# Development
+.DS_Store
+.vscode/settings.json.local
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+Thumbs.db
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
