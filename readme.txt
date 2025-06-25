@@ -1,10 +1,10 @@
 === Formshive ===
-Contributors: formshive
+Contributors: gofranz
 Tags: forms, contact-forms, form-builder, embed, gutenberg-blocks
 Requires at least: 5.0
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 0.1.3
+Stable tag: 0.1.4
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -130,6 +130,9 @@ Yes! The plugin includes a custom Gutenberg block for easy form embedding in the
 
 = 0.1.3 =
 * Correct mismatched stable tag
+
+= 0.1.4 =
+* Correct Contributors to include gofranz
 
 == Additional Info ==
 

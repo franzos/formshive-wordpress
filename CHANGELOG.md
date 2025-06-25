@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.4] - 2025-06-25
+
+### Fixed
+- Correct Contributors to include gofranz
+
 ## [0.1.3] - 2025-06-09
 
 ### Fixed
